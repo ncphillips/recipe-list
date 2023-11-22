@@ -1,24 +1,16 @@
-# README
+# Recipe Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+1. Clone the repo
+2. Run `bin/setup`
+3. Run `bin/dev`
 
-* Ruby version
+## Development Commands
 
-* System dependencies
+| Command | Description                                       |
+| ------- |---------------------------------------------------|
+| bin/dev | Start development environment. (Rails + Tailwind) |
+| rails test | Run unit and integration tests.                   |
+| rails test:system | Run system tests.                                 |
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
