@@ -1,4 +1,6 @@
-# Recipe Test
+# Recipe List
+
+The easiest way to track your recipes and shop for ingredients.
 
 ## Getting Started
 
