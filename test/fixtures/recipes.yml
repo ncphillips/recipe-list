@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: recipes
+#
+#  id           :integer          not null, primary key
+#  instructions :text
+#  name         :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+# Indexes
+#
+#  index_recipes_on_name  (name)
+#
+
+grilled_cheese:
+  name: Grilled Cheese
+  instructions: |
+    1. Butter one side of each slice of bread.
+    2. Place one slice of bread, buttered side down, in a skillet over medium heat, and top with the cheese.
+    3. Cover with the other slice of bread, buttered side up.
+    4. Cook until golden brown on each side, about 3 minutes per side.
+
+pb_and_j:
+  name: Peanut Butter and Jelly Sandwich
+  instructions: |
+    1. Spread peanut butter on one slice of bread and jelly on the other.
+    2. Place one slice, peanut butter side up, on a plate.
+    3. Top with the other slice, jelly side down.
+    4. Cut in half and serve.
