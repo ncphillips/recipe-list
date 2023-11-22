@@ -2,6 +2,8 @@
 
 The easiest way to track your recipes and shop for ingredients.
 
+![RecipeList Logo](./logo.png)
+
 ## Getting Started
 
 1. Clone the repo
