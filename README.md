@@ -18,3 +18,8 @@ The easiest way to track your recipes and shop for ingredients.
 | rails test | Run unit and integration tests.                   |
 | rails test:system | Run system tests.                                 |
 
+## What we doing?
+
+- Nolan wants to be able to pick meals for the week and generate a shopping list.
+- Matt wants to be able to search for recipes by ingredient.
+
