@@ -1,15 +1,7 @@
-# == Schema Information
-#
-# Table name: ingredients
-#
-#  id         :integer          not null, primary key
-#  name       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-milk:
-  name: Milk
+one:
+  name: MyString
 
-egg:
-  name: Egg
+two:
+  name: MyString
