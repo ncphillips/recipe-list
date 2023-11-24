@@ -3,6 +3,8 @@
 # Table name: recipe_ingredients
 #
 #  id            :integer          not null, primary key
+#  amount        :decimal(, )      not null
+#  unit          :string           not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  ingredient_id :integer          not null
@@ -22,11 +24,17 @@
 one:
   recipe: pb_and_j
   ingredient: peanut_butter
+  amount: 2
+  unit: tbsp
 
 two:
   recipe: pb_and_j
   ingredient: jelly
+  amount: 2
+  unit: tbsp
 
 three:
   recipe: pb_and_j
   ingredient: bread
+  amount: 2
+  unit: slices

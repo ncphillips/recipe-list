@@ -16,13 +16,14 @@ require "test_helper"
 
 class RecipeTest < ActiveSupport::TestCase
   test "adding ingredients to recipes" do
-    recipe = Recipe.new(
+    recipe = Recipe.create(
       name: "Spoon of Peanut Butter",
       instructions: "Get a spoon. Get some peanut butter. Put the peanut butter on the spoon. Eat the peanut butter."
     )
+    peanut_butter = ingredients(:peanut_butter)
 
-    recipe.ingredients << ingredients(:peanut_butter)
+    recipe.add(1, "tbsp", peanut_butter)
 
-    assert_equal 1, recipe.ingredients.size
+    assert_includes recipe.ingredients, peanut_butter
   end
 end

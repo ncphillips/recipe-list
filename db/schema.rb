@@ -18,6 +18,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_24_014149) do
   end
 
   create_table "recipe_ingredients", force: :cascade do |t|
+    t.decimal "amount", null: false
+    t.string "unit", null: false
     t.integer "recipe_id", null: false
     t.integer "ingredient_id", null: false
     t.datetime "created_at", null: false
