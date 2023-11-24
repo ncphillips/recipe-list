@@ -13,11 +13,11 @@
 #  index_recipes_on_name  (name)
 #
 class Recipe < ApplicationRecord
-  # Has ingredient through recipe_ingredients
+
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
 
-  def add(amount, unit, ingredient)
-    recipe_ingredients.create(amount:, unit:, ingredient:)
+  def add(quantity, ingredient)
+    recipe_ingredients.create(quantity:, ingredient:)
   end
 end

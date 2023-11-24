@@ -21,8 +21,9 @@ class RecipeTest < ActiveSupport::TestCase
       instructions: "Get a spoon. Get some peanut butter. Put the peanut butter on the spoon. Eat the peanut butter."
     )
     peanut_butter = ingredients(:peanut_butter)
+    one_cup = Quantity.new(1, "cup")
 
-    recipe.add(1, "tbsp", peanut_butter)
+    recipe.add(one_cup, peanut_butter)
 
     assert_includes recipe.ingredients, peanut_butter
   end

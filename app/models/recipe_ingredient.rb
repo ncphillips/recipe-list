@@ -21,6 +21,8 @@
 #  recipe_id      (recipe_id => recipes.id)
 #
 class RecipeIngredient < ApplicationRecord
+  include Quantifiable
+
   belongs_to :recipe
   belongs_to :ingredient
 end
