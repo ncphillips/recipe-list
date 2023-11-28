@@ -3,6 +3,7 @@
 # Table name: grocery_lists
 #
 #  id         :integer          not null, primary key
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -26,5 +27,9 @@ class GroceryList < ApplicationRecord
 
   def check_off(ingredient)
     grocery_list_items.find_by(ingredient: ingredient).check
+  end
+
+  def to_s
+    name
   end
 end

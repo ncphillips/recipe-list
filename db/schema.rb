@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_213202) do
   end
 
   create_table "grocery_lists", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
