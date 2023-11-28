@@ -13,4 +13,10 @@ class GroceryList < ApplicationRecord
   def add(quantity, ingredient)
     grocery_list_items.create(quantity:, ingredient:)
   end
+
+  def add_all_from(recipe)
+    recipe.recipe_ingredients.each do |recipe_ingredient|
+      add(recipe_ingredient.quantity, recipe_ingredient.ingredient)
+    end
+  end
 end

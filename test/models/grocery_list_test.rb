@@ -16,4 +16,15 @@ class GroceryListTest < ActiveSupport::TestCase
 
     assert_includes list.ingredients, ingredients(:peanut_butter)
   end
+
+  test "adding ingredients from a recipe" do
+    list = GroceryList.create
+    recipe = recipes(:pb_and_j)
+
+    list.add_all_from(recipe)
+
+    assert_includes list.ingredients, ingredients(:peanut_butter)
+    assert_includes list.ingredients, ingredients(:jelly)
+    assert_includes list.ingredients, ingredients(:bread)
+  end
 end
