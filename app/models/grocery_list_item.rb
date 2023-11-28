@@ -3,8 +3,9 @@
 # Table name: grocery_list_items
 #
 #  id              :integer          not null, primary key
-#  amount          :decimal(, )      not null
-#  unit            :string           not null
+#  amount          :decimal(, )
+#  checked         :boolean
+#  unit            :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  grocery_list_id :integer          not null
@@ -21,8 +22,10 @@
 #  ingredient_id    (ingredient_id => ingredients.id)
 #
 class GroceryListItem < ApplicationRecord
-  include Quantifiable
-
   belongs_to :ingredient
   belongs_to :grocery_list
+
+  def check
+    update(checked: true)
+  end
 end

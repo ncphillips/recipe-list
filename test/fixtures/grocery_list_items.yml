@@ -3,8 +3,9 @@
 # Table name: grocery_list_items
 #
 #  id              :integer          not null, primary key
-#  amount          :decimal(, )      not null
-#  unit            :string           not null
+#  amount          :decimal(, )
+#  checked         :boolean
+#  unit            :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  grocery_list_id :integer          not null
@@ -22,13 +23,15 @@
 #
 
 one:
+  grocery_list: one
   amount: 1
   unit: kg
   ingredient: peanut_butter
-  grocery_list: one
+  checked: false
 
 two:
+  grocery_list: one
   amount: 1
   unit: cup
   ingredient: jelly
-  grocery_list: one
+  checked: false

@@ -23,7 +23,17 @@
 require "test_helper"
 
 class GroceryListItemTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "items aren't checked off by default" do
+    item = GroceryListItem.create
+
+    refute item.checked?
+  end
+
+  test "checking off an item" do
+    item = GroceryListItem.create
+
+    item.check
+
+    assert item.checked?
+  end
 end
