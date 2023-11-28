@@ -16,7 +16,7 @@ class Recipe < ApplicationRecord
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
 
-  scope :containing, ->(ingredient) { joins(:ingredients).where(ingredients: [ingredient]) }
+  scope :containing, ->(*ingredients) { joins(:ingredients).where(ingredients:) }
 
   def add(quantity, ingredient)
     recipe_ingredients.create(quantity:, ingredient:)

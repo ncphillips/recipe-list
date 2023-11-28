@@ -37,4 +37,18 @@ class RecipeTest < ActiveSupport::TestCase
 
     assert_includes Recipe.containing(peanut_butter), recipe
   end
+
+  test "finding a recipe by multiple ingredients" do
+    peanut_butter = ingredients(:peanut_butter)
+    jelly = ingredients(:jelly)
+
+    spoon_of_pb = Recipe.create!(name: "Spoon of Jelly")
+    spoon_of_pb.add(1.cup, jelly)
+
+    spoon_of_jelly = Recipe.create!(name: "Spoon of Jelly")
+    spoon_of_jelly.add(1.cup, jelly)
+
+    assert_includes Recipe.containing(peanut_butter, jelly), spoon_of_pb
+    assert_includes Recipe.containing(peanut_butter, jelly), spoon_of_jelly
+  end
 end

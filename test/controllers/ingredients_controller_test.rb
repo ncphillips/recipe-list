@@ -2,7 +2,7 @@ require "test_helper"
 
 class IngredientsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @ingredient = ingredients(:one)
+    @ingredient = ingredients(:peanut_butter)
   end
 
   test "should get index" do
@@ -17,7 +17,7 @@ class IngredientsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ingredient" do
     assert_difference("Ingredient.count") do
-      post ingredients_url, params: { ingredient: { name: @ingredient.name } }
+      post ingredients_url, params: { ingredient: { name: @ingredient.name + " 1" } }
     end
 
     assert_redirected_to ingredient_url(Ingredient.last)
