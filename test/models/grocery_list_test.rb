@@ -27,4 +27,12 @@ class GroceryListTest < ActiveSupport::TestCase
     assert_includes list.ingredients, ingredients(:jelly)
     assert_includes list.ingredients, ingredients(:bread)
   end
+
+  test "checking off items" do
+    list = grocery_lists(:one)
+
+    list.check_off(ingredients(:peanut_butter))
+
+    refute list.whats_left.include?(ingredients(:peanut_butter))
+  end
 end

@@ -22,6 +22,8 @@
 #  ingredient_id    (ingredient_id => ingredients.id)
 #
 class GroceryListItem < ApplicationRecord
+  include Quantifiable
+
   belongs_to :ingredient
   belongs_to :grocery_list
 
