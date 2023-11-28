@@ -1,0 +1,4 @@
+<% @amount = number_to_human(grocery_list_item.quantity.amount) %>
+<% @unit = grocery_list_item.quantity.unit %>
+<% @ingredient = grocery_list_item.ingredient %>
+<li><%= @amount %> <%= @unit %> of <%= @ingredient.name %></li>
